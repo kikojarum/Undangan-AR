@@ -1,0 +1,25 @@
+Taruh file berikut di folder ini:
+
+MUSIK:
+  music.mp3           ← File musik background (max 3MB, format MP3)
+                         Tips: cari "wedding instrumental" di YouTube → convert ke MP3
+
+FOTO MEMPELAI:
+  foto-pria.jpg       ← Foto mempelai pria (square, min 300x300px)
+  foto-wanita.jpg     ← Foto mempelai wanita (square, min 300x300px)
+
+FOTO GALERI:
+  foto-1.jpg          ← Foto pertama (tampil besar, landscape)
+  foto-2.jpg
+  foto-3.jpg
+  foto-4.jpg
+  foto-5.jpg
+  foto-6.jpg
+
+Setelah upload foto:
+1. Isi path di js/config.js: groom.photo = "assets/foto-pria.jpg"
+2. Ganti placeholder di index.html (lihat README.md)
+
+Tips:
+  - Kompres foto di https://squoosh.app (target: max 150KB per foto)
+  - Format WebP lebih ringan dari JPG
