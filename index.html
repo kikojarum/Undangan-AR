@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Undangan Digital" />
+
+  <!-- =====================================================
+    🔧 UBAH: Meta title sesuai nama klien
+  ====================================================== -->
+  <title>Undangan Pernikahan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== COVER ========== -->
+  <div id="cover" class="cover-page">
+    <div class="cover-floral" id="coverFloral"></div>
+    <canvas id="petalsCanvas"></canvas>
+
+    <div class="cover-content">
+      <span class="cover-badge" id="coverBadge">Undangan Pernikahan</span>
+
+      <h1 class="cover-names">
+        <span id="coverGroom"></span>
+        <span class="cover-amp">&</span>
+        <span id="coverBride"></span>
+      </h1>
+
+      <div class="cover-divider">
+        <div class="cdiv-line"></div>
+        <div class="cdiv-diamond"></div>
+        <div class="cdiv-line"></div>
+      </div>
+
+      <p class="cover-date" id="coverDate"></p>
+      <p class="cover-guest" id="coverGuest"></p>
+
+      <button id="openBtn" class="cover-btn">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l9 6 9-6"/><rect x="3" y="8" width="18" height="13" rx="2"/></svg>
+        Buka Undangan
+      </button>
+    </div>
+
+    <p class="cover-hint">Ketuk untuk membuka</p>
+  </div>
+
+  <!-- ========== MUSIK ========== -->
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg" />
+  </audio>
+  <button class="music-fab" id="musicFab" title="Musik">
+    <svg id="musicIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 3v10.55A4 4 0 1016 17V7h4V3h-8z"/>
+    </svg>
+  </button>
+
+  <!-- ========== KONTEN UTAMA ========== -->
+  <main id="main" class="hidden">
+
+    <!-- HERO / BISMILLAH -->
+    <section class="sec-hero reveal">
+      <p class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+      <p class="verse">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya."</p>
+      <p class="verse-src">— QS. Ar-Rum: 21 —</p>
+    </section>
+
+    <div class="ornament reveal">✦ ✦ ✦</div>
+
+    <!-- MEMPELAI -->
+    <section class="sec reveal">
+      <p class="sec-tag">Mempelai</p>
+      <h2 class="sec-title">Kami Yang Berbahagia</h2>
+
+      <div class="couple-grid">
+        <div class="couple-card">
+          <!-- 🔧 UBAH: Ganti div.c-avatar dengan <img> jika ada foto -->
+          <!-- Contoh: <img src="assets/foto-pria.jpg" class="c-photo" alt="Foto Mempelai Pria"> -->
+          <div class="c-avatar" id="avGroom"></div>
+          <h3 class="c-name" id="groomFullName"></h3>
+          <p class="c-sub" id="groomParents"></p>
+          <a class="c-ig" id="groomIG" href="#" target="_blank"></a>
+        </div>
+
+        <div class="couple-mid">
+          <div class="cmid-line"></div>
+          <span class="cmid-heart">♡</span>
+          <div class="cmid-line"></div>
+        </div>
+
+        <div class="couple-card">
+          <div class="c-avatar" id="avBride"></div>
+          <h3 class="c-name" id="brideFullName"></h3>
+          <p class="c-sub" id="brideParents"></p>
+          <a class="c-ig" id="brideIG" href="#" target="_blank"></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament reveal">✦</div>
+
+    <!-- DETAIL ACARA -->
+    <section class="sec reveal">
+      <p class="sec-tag">Acara</p>
+      <h2 class="sec-title">Tanggal Istimewa</h2>
+
+      <div class="event-grid">
+        <div class="event-card">
+          <div class="event-top-bar"></div>
+          <div class="event-icon">🌸</div>
+          <h3 class="event-name">Akad Nikah</h3>
+          <p class="event-date" id="akadDate"></p>
+          <p class="event-time" id="akadTime"></p>
+          <p class="event-loc" id="akadLoc"></p>
+          <a class="btn-maps" id="akadMaps" href="#" target="_blank">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Google Maps
+          </a>
+        </div>
+
+        <div class="event-card">
+          <div class="event-top-bar"></div>
+          <div class="event-icon">🎊</div>
+          <h3 class="event-name">Resepsi</h3>
+          <p class="event-date" id="resepsiDate"></p>
+          <p class="event-time" id="resepsiTime"></p>
+          <p class="event-loc" id="resepsiLoc"></p>
+          <a class="btn-maps" id="resepsiMaps" href="#" target="_blank">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="sec-countdown reveal">
+      <div class="sec-inner">
+        <p class="sec-tag">Hitung Mundur</p>
+        <h2 class="sec-title">Menuju Hari Bahagia</h2>
+        <div class="cd-grid" id="cdGrid">
+          <div class="cd-box"><span class="cd-num" id="cdD">00</span><span class="cd-lbl">Hari</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><span class="cd-num" id="cdH">00</span><span class="cd-lbl">Jam</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><span class="cd-num" id="cdM">00</span><span class="cd-lbl">Menit</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><span class="cd-num" id="cdS">00</span><span class="cd-lbl">Detik</span></div>
+        </div>
+        <p id="cdMsg" class="cd-msg"></p>
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section class="sec reveal">
+      <p class="sec-tag">Galeri</p>
+      <h2 class="sec-title">Momen Bersama</h2>
+
+      <div class="gallery-grid">
+        <!--
+          🔧 UBAH: Ganti setiap .gal-placeholder dengan tag <img>
+          Contoh:
+          <div class="gal-item" style="--i:1">
+            <img src="assets/foto-1.jpg" alt="Foto 1">
+          </div>
+        -->
+        <div class="gal-item" style="--i:1"><div class="gal-ph"><span>📷</span><small>Foto 1</small></div></div>
+        <div class="gal-item" style="--i:2"><div class="gal-ph"><span>📷</span><small>Foto 2</small></div></div>
+        <div class="gal-item" style="--i:3"><div class="gal-ph"><span>📷</span><small>Foto 3</small></div></div>
+        <div class="gal-item" style="--i:4"><div class="gal-ph"><span>📷</span><small>Foto 4</small></div></div>
+        <div class="gal-item" style="--i:5"><div class="gal-ph"><span>📷</span><small>Foto 5</small></div></div>
+        <div class="gal-item" style="--i:6"><div class="gal-ph"><span>📷</span><small>Foto 6</small></div></div>
+      </div>
+    </section>
+
+    <div class="ornament reveal">✦ ✦ ✦</div>
+
+    <!-- RSVP -->
+    <section class="sec reveal">
+      <p class="sec-tag">Konfirmasi</p>
+      <h2 class="sec-title">Kehadiran Anda</h2>
+      <p class="sec-sub" id="rsvpDeadline"></p>
+
+      <div class="rsvp-box">
+        <div class="f-group">
+          <label class="f-label">Nama Lengkap</label>
+          <input type="text" class="f-input" id="rsvpName" placeholder="Nama Anda" />
+        </div>
+        <div class="f-group">
+          <label class="f-label">Konfirmasi Kehadiran</label>
+          <div class="radio-row" id="radioGroup">
+            <label class="r-opt" onclick="pickAttend(this,'Hadir')"><input type="radio" name="att" />Hadir</label>
+            <label class="r-opt" onclick="pickAttend(this,'Tidak Hadir')"><input type="radio" name="att" />Tidak Hadir</label>
+            <label class="r-opt" onclick="pickAttend(this,'Masih Ragu')"><input type="radio" name="att" />Masih Ragu</label>
+          </div>
+        </div>
+        <div class="f-group">
+          <label class="f-label">Ucapan &amp; Doa</label>
+          <textarea class="f-input" id="rsvpMsg" rows="3" placeholder="Tuliskan ucapan terbaik Anda…"></textarea>
+        </div>
+        <button class="btn-primary" id="rsvpBtn" onclick="submitRSVP()">Kirim Konfirmasi</button>
+        <p class="f-feedback" id="rsvpFeedback"></p>
+      </div>
+    </section>
+
+    <!-- BUKU TAMU -->
+    <section class="sec reveal">
+      <p class="sec-tag">Buku Tamu</p>
+      <h2 class="sec-title">Ucapan &amp; Doa</h2>
+      <div class="gb-list" id="gbList"></div>
+    </section>
+
+    <!-- PENUTUP -->
+    <section class="sec-closing reveal">
+      <p class="closing-orn">✦ ✦ ✦</p>
+      <h2 class="closing-names" id="closingNames"></h2>
+      <p class="closing-text">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+      <p class="closing-sign">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+      <p class="closing-orn">✦</p>
+    </section>
+
+    <footer class="site-footer">
+      <p>Made with ♡ · Digital Invitation</p>
+    </footer>
+
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
