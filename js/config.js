@@ -13,43 +13,43 @@ const CONFIG = {
      1. IDENTITAS MEMPELAI
   ────────────────────────────────────────── */
   groom: {
-    fullName:  "Muhammad Rizky Pratama",   // Nama lengkap untuk seksi mempelai
-    shortName: "Rizky",                    // Nama pendek untuk cover & penutup
-    parents:   "Putra pertama dari\nBapak Ahmad & Ibu Sari",
-    instagram: "@rizky.pratama",
+    fullName:  "Asep Abdul Aziz Algifari",   // Nama lengkap untuk seksi mempelai
+    shortName: "Aziz",                    // Nama pendek untuk cover & penutup
+    parents:   "Putra pertama dari\nBapak",
+    instagram: "@kikojarum",
     igLink:    "https://instagram.com/",
-    photo:     "",   // Kosongkan jika belum ada. Isi: "assets/foto-pria.jpg"
+    photo:     "assets/foto-pria.jpg",   // Kosongkan jika belum ada. Isi: "assets/foto-pria.jpg"
   },
 
   bride: {
-    fullName:  "Ayu Lestari Dewi",
-    shortName: "Ayu",
-    parents:   "Putri pertama dari\nBapak Budi & Ibu Rani",
-    instagram: "@ayu.lestari",
+    fullName:  "Riska",
+    shortName: "Riska",
+    parents:   "Putri pertama dari\nBapak",
+    instagram: "@khariska_01",
     igLink:    "https://instagram.com/",
-    photo:     "",   // Isi: "assets/foto-wanita.jpg"
+    photo:     "assets/foto-wanita.jpg",   // Isi: "assets/foto-wanita.jpg"
   },
 
   /* ──────────────────────────────────────────
      2. TANGGAL & WAKTU
   ────────────────────────────────────────── */
   event: {
-    displayDate:  "Sabtu, 14 Juni 2025",   // Teks tanggal di cover & kartu acara
-    countdownISO: "2025-06-14T11:00:00",   // Format: YYYY-MM-DDTHH:MM:SS (waktu resepsi)
+    displayDate:  "Rabu, 07 Juli 2027",   // Teks tanggal di cover & kartu acara
+    countdownISO: "2027-07-07T11:00:00",   // Format: YYYY-MM-DDTHH:MM:SS (waktu resepsi)
 
     akad: {
       time:     "08.00 – 10.00 WIB",
-      location: "Masjid Al-Ikhlas\nJl. Merdeka No. 1, Jakarta Selatan",
+      location: "Masjid Uswatun Hasanah\nJl. Telaga Kec. Bantarkawung Brebes",
       mapsURL:  "https://maps.google.com/?q=Masjid+Al-Ikhlas+Jakarta",
     },
 
     resepsi: {
       time:     "11.00 – 15.00 WIB",
-      location: "Gedung Serbaguna Harmoni\nJl. Sudirman No. 45, Jakarta Pusat",
+      location: "Rumah mempelai wanita\nJl. Telaga Kec. Bantarkawung Brebes",
       mapsURL:  "https://maps.google.com/?q=Gedung+Harmoni+Jakarta",
     },
 
-    rsvpDeadline: "7 Juni 2025",  // Batas konfirmasi kehadiran
+    rsvpDeadline: "7 Juli 2027",  // Batas konfirmasi kehadiran
   },
 
   /* ──────────────────────────────────────────
@@ -79,7 +79,7 @@ const CONFIG = {
      Taruh file musik di assets/music.mp3
      Atau isi URL eksternal di bawah (opsional)
   ────────────────────────────────────────── */
-  musicTitle: "Instrumental Wedding",
+  musicTitle: "assets/music.mp3",
 
   /* ──────────────────────────────────────────
      6. BUKU TAMU AWAL (dummy / seed data)
@@ -87,26 +87,7 @@ const CONFIG = {
      Kosongkan array [] jika tidak ingin ada dummy.
   ────────────────────────────────────────── */
   guestbookSeed: [
-    {
-      name:    "Keluarga Besar Santoso",
-      attend:  "Hadir",
-      message: "Semoga menjadi keluarga yang sakinah mawaddah warahmah. Barakallahu lakuma! 🤍",
-    },
-    {
-      name:    "Dinda & Fauzan",
-      attend:  "Hadir",
-      message: "Congrats bestie! Akhirnya sah juga. Semoga langgeng selamanya dan segera hadir buah hati yang soleh.",
-    },
-    {
-      name:    "Bu Ratna – Kantor",
-      attend:  "Tidak Hadir",
-      message: "Mohon maaf tidak bisa hadir. Doa terbaik selalu menyertai kalian berdua.",
-    },
-    {
-      name:    "Tim Arsitek Kreatif",
-      attend:  "Hadir",
-      message: "Selamat menempuh hidup baru! Semoga bahagia selalu dan banyak rezeki.",
-    },
+    
   ],
 
 };
